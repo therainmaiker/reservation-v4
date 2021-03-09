@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "IFL3/GBYscUVLxHn5gPSFzb+PWLuS2DAqhGibICstRsyiySIgSDTh78qOzfkh63Uoc8bOFFLfYcZJwTZSxLpZw==",
+  "dgSpecHash": "qy6JlX3+TBPjjGLgsfmHxc+5a+bL0w5iOxVS8SsmpA1jzWXMkpg3bZ9/Iij6gcfssggvL8bEfHxG3roo5EaX7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Youcode\\source\\repos\\Reservation V4\\Reservation V4\\Reservation V4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Youcode\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Youcode\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\5.0.4\\microsoft.aspnetcore.authentication.google.5.0.4.nupkg.sha512",
     "C:\\Users\\Youcode\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\Youcode\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",
     "C:\\Users\\Youcode\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.3\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.3.nupkg.sha512",

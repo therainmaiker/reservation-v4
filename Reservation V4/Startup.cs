@@ -32,8 +32,18 @@ namespace Reservation_V4
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+
+                    options.ClientId = "782990374292-9sda613hhaakvhe4u9n11v4e73lcenr6.apps.googleusercontent.com";
+                    options.ClientSecret = "AY-S2qUwa-fhZHnDGZqG0PU8";
+
+
+                });
             services.AddControllersWithViews();
         }
 
