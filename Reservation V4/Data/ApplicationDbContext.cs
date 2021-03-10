@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Reservation_V4.Models;
 
 namespace Reservation_V4.Data
 {
@@ -12,5 +13,8 @@ namespace Reservation_V4.Data
             : base(options)
         {
         }
+
+        public DbSet<Student> students { get; set; }
+
     }
 }
