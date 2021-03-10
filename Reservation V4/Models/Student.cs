@@ -13,6 +13,7 @@ namespace Reservation_V4.Models
         public string LastName { get; set; }
         public int ResCounter { get; set; }
         
+        
 
     }
 }

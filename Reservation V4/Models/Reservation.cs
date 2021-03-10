@@ -12,7 +12,7 @@ namespace Reservation_V4.Models
         public bool Status { get; set; }
         public string Cause { get; set; }
 
-        
+        public List<Reservation> Reservations { get; set; }
         
     }
 }
