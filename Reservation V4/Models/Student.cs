@@ -11,9 +11,9 @@ namespace Reservation_V4.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int ResCounter { get; set; }
-        
-        
+        public int ResCounter { get; set; } = 0;
+
+        public  Class Classes { get; set; }
 
     }
 }

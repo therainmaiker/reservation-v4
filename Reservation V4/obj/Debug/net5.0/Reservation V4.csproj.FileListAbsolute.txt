@@ -175,3 +175,7 @@ C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Raz
 C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Views\ReservationType\Index.cshtml.g.cs
+C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Views\ReservationType\Create.cshtml.g.cs
+C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Views\ReservationType\Edit.cshtml.g.cs
+C:\Users\Youcode\source\repos\Reservation V4\Reservation V4\obj\Debug\net5.0\Razor\Views\ReservationType\Delete.cshtml.g.cs

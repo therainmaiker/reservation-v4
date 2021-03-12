@@ -5,9 +5,14 @@ using System.Threading.Tasks;
 
 namespace Reservation_V4.Models
 {
-    public class Branches
+    public enum Class
     {
-        public string branch { get; set; }
+        
+        class1,
+        CSHARP,
+        Java,
+        Febe
+        
 
 
     }

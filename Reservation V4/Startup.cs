@@ -33,10 +33,20 @@ namespace Reservation_V4
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
 
-         
+            // inject identity role and identity user
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+        {
+            options.User.RequireUniqueEmail = true;
+            options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+            options.Password.RequireNonAlphanumeric = false;
+            options.Password.RequireUppercase = false;
+
+        })
+           .AddDefaultUI()
+           .AddRoles<IdentityRole>()
+           .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
             services.AddAuthentication()
                 .AddGoogle(options =>
