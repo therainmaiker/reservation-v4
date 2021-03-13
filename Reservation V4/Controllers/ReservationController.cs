@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Reservation_V4.Data;
@@ -15,9 +17,12 @@ namespace Reservation_V4.Controllers
     {
         private ApplicationDbContext _context;
 
-        public ReservationController(ApplicationDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public ReservationController(ApplicationDbContext context ,UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
 
         }
         // GET: ReservationController
@@ -41,19 +46,20 @@ namespace Reservation_V4.Controllers
         {
             List<ReservationType> reservationTypes = _context.ReservationTypes.ToList();
             ViewBag.reservatiolist = new SelectList(reservationTypes, "Id", "ReservationName");
-            
-            
+
+            ViewBag.getuserid = _userManager.GetUserId(HttpContext.User);
             return View();
         }
 
         // POST: ReservationController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection ,Reservation reservation , ReservationType reservationType )
+        public ActionResult Create(IFormCollection collection ,Reservation reservation , ReservationType reservationType , UserManager<Student> userManager)
         {
-            
-           
-           
+           string userid = HttpContext.User.Identity.Name;
+
+
+
             return View(reservation);
         }
 

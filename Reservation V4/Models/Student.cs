@@ -8,7 +8,7 @@ namespace Reservation_V4.Models
 {
     public class Student:IdentityUser
     {
-
+        //public string ID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int ResCounter { get; set; } = 0;
