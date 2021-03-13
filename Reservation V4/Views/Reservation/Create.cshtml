@@ -11,7 +11,12 @@
                 <input asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
-           
+
+            <div>
+                <p>Reservation Type :</p>
+                @Html?.DropDownList("Id", ViewBag.reservatiolist as SelectList, "ReservationName", new {@class = "from-control"})
+            </div>
+      
             <div class="form-group">
                 <label asp-for="Cause" class="control-label"></label>
                 <input asp-for="Cause" class="form-control" />

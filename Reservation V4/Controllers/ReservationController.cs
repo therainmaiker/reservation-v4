@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Reservation_V4.Data;
 using Reservation_V4.Models;
@@ -38,6 +39,10 @@ namespace Reservation_V4.Controllers
         // GET: ReservationController/Create
         public ActionResult Create()
         {
+            List<ReservationType> reservationTypes = _context.ReservationTypes.ToList();
+            ViewBag.reservatiolist = new SelectList(reservationTypes, "Id", "ReservationName");
+            
+            
             return View();
         }
 
@@ -51,7 +56,20 @@ namespace Reservation_V4.Controllers
                 _context.Add(reservation);
                 _context.SaveChanges();
 
-                ViewBag.res = reservationType;
+
+
+                //ViewBag.res = reservationType;
+                //var ReservationTypeList = (from VAR in _context.ReservationTypes
+                //    select new SelectListItem()
+                //    {
+                //        Text = VAR.ReservationName,
+                //        Value = VAR.Id.ToString(),
+
+                //    }).ToList();
+
+              
+               
+
                 return RedirectToAction(nameof(Index));
             }
             return View(reservation);
