@@ -51,27 +51,9 @@ namespace Reservation_V4.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection ,Reservation reservation , ReservationType reservationType )
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(reservation);
-                _context.SaveChanges();
-
-
-
-                //ViewBag.res = reservationType;
-                //var ReservationTypeList = (from VAR in _context.ReservationTypes
-                //    select new SelectListItem()
-                //    {
-                //        Text = VAR.ReservationName,
-                //        Value = VAR.Id.ToString(),
-
-                //    }).ToList();
-
-              
-               
-
-                return RedirectToAction(nameof(Index));
-            }
+            
+           
+           
             return View(reservation);
         }
 
