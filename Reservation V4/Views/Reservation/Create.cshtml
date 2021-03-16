@@ -15,12 +15,9 @@
             <div>
                 <p>Reservation Type :</p>
                 @Html?.DropDownList("Id", ViewBag.reservatiolist as SelectList, "ReservationName", new {@class = "from-control"})
-                
-               
+
             </div>
-            <div>
-                @ViewBag.reservatiolist
-            </div>
+           
       
             <div class="form-group">
                 <label asp-for="Cause" class="control-label"></label>

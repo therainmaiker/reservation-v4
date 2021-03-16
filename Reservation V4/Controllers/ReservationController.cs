@@ -56,11 +56,9 @@ namespace Reservation_V4.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection ,Reservation reservation , ReservationType reservationType , UserManager<Student> userManager)
         {
-           string userid = HttpContext.User.Identity.Name;
+          
 
-
-
-            return View(reservation);
+            return View();
         }
 
         // GET: ReservationController/Edit/5
